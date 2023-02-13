@@ -13,7 +13,6 @@ pipeline {
         }
 	stage('Build') {
 	    steps {
-		git branch: 'master', credentialsId: 'github', url: 'https://github.com/wokeupinjune/dockerdemo'
 		dockerImage = docker.build("demo/demo:latest")
         	}
 	}
