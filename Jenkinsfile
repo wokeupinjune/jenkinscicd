@@ -13,7 +13,7 @@ pipeline {
         }
 	stage('Build') {
 	    steps {
-		dockerImage = docker.build("demo/demo:latest")
+		sh 'docker build . -t demo/demo:latest')
         	}
 	}
 	stage('Push image') {
