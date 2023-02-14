@@ -25,6 +25,7 @@ pipeline {
 	    steps {
 		echo 'Deploying artifact to TEST...'
 	    }
+	}
 	stage('Test') {
 	    steps {
 		echo 'Running some tests...'
