@@ -23,13 +23,13 @@ pipeline {
    	}
 	stage('Deploy to Test env')
 	    steps {
-		sh 'echo Deploying artifact to TEST...'
+		echo 'Deploying artifact to TEST...'
 	    }
 	stage('Test') {
 	    steps {
-		sh 'echo "Running some tests..."'
+		echo 'Running some tests...'
 		sh 'sleep 2'
-		sh 'echo "Tests passed"'
+		echo 'Tests passed'
 	    }
 	}
 	stage('Deploy to PROD?') {
