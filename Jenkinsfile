@@ -28,7 +28,7 @@ pipeline {
 	}
 	stage('Test') {
 	    steps {
-		sh 'echo "Running some tests..."
+		sh 'echo "Running some tests..."'
 		sh 'sleep 2'
 		sh 'echo "Tests passed"'
 	    }
