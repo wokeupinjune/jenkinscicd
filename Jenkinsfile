@@ -21,7 +21,7 @@ pipeline {
 		sh 'docker push localhost:5000/demo:latest' 	
 	    }
    	}
-	stage('Deploy to Test env')
+	stage('Deploy to Test env') {
 	    steps {
 		echo 'Deploying artifact to TEST...'
 	    }
