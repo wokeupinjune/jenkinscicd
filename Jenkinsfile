@@ -23,7 +23,7 @@ pipeline {
    	}
 	stage('Deploy to Test env')
 	    steps {
-		sh 'Deploying artifact to TEST...'
+		sh 'echo Deploying artifact to TEST...'
 	    }
 	stage('Test') {
 	    steps {
