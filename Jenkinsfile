@@ -12,13 +12,13 @@ pipeline {
         }
 	stage('Build') {
 	    steps {
-		sh 'docker build . -t demo/demo:latest'
+		sh 'docker build . -t demo:latest'
         	}
 	}
 	stage('Push image') {
 	    steps {
-		sh 'docker image tag demo/demo:latest registry-demo:5000/demo/demo:latest'
-		sh 'docker push registry-demo:5000/demo/demo:latest' 	
+		sh 'docker image tag demo:latest localhost:5000/demo:latest'
+		sh 'docker push localhost:5000/demo:latest' 	
 	    }
    	}
     }
