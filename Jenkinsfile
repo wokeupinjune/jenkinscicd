@@ -3,8 +3,9 @@ pipeline {
     stages {
         stage('Welcome-test') {
             steps {
-                echo 'Hello World'            }
-        }
+                echo 'Hello World'
+        	}
+	}
         stage('Git clone') {
             steps {
                 git branch: 'main', credentialsId: 'github', url: 'https://github.com/wokeupinjune/jenkinscicd'
@@ -34,8 +35,10 @@ pipeline {
 	    }
 	}
 	stage('Deploy to PROD?') {
-		input message: "Deploy to PROD?"
+	    input message: 'Deploy to PROD?'
+		steps {
+		   echo 'Deploying...'
+		}
 	}
-    }
+    }	
 }
-
