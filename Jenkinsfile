@@ -34,7 +34,7 @@ pipeline {
 	    }
 	}
 	stage('Deploy to PROD?') {
-		input "Deploy to PROD?"
+		input message: "Deploy to PROD?"
 	}
     }
 }
