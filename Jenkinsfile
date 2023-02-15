@@ -34,17 +34,5 @@ pipeline {
 		echo 'Tests passed'
 	    }
 	}
-	stage('Deploy to PROD?') {
-	    when {
-		expression {
-			input message: 'Deploy to PROD?'
-			return true
-		}
-			beforeAgent true
-		steps {
-		   echo 'Deploying...'
-		}
-		}
-    	}	
      }
 }
