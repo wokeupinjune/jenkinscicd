@@ -1,4 +1,4 @@
 # syntax=docker/dockerfile:1
-FROM kennethreitz/httpbin
+FROM busybox 
 RUN echo
 CMD ["build", "successful"]
